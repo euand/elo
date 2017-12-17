@@ -12,13 +12,13 @@ if __name__ == '__main__':
     parser.add_argument('--away', dest='away_player', required=True)
     parser.add_argument('--home-score', dest="home_score", type=int, required=True)
     parser.add_argument('--away-score', dest="away_score", type=int, required=True)
-    parser.add_argument('--overtime', dest="overtime", required=False, default = 0)
+    parser.add_argument('--overtime', dest="overtime", type=int, required=False, default = 0)
     parser.add_argument('--league', dest="league", required=False, default = DEFAULT_LEAGUE)
 
     match_info = vars(parser.parse_args())
     match_info['time'] = datetime.now().strftime("%Y-%m-%d %H:%M")
-    match_info['home'] = match_info['home'].lower()
-    match_info['away'] = match_info['away'].lower()
+    match_info['home_player'] = match_info['home_player'].lower()
+    match_info['away_player'] = match_info['away_player'].lower()
 
     league_path = LEAGUE_PATH.format(match_info['league'])
 
