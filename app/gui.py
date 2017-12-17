@@ -3,13 +3,13 @@ import subprocess
 
 class Application(Frame):
     def send_match(self):
-        args = ['python3'] + ['elo/match.py'] + \
-                ['--home'] + [self.home.get()] + \
-                ['--away'] + [self.away.get()] + \
-                ['--home-score'] + [self.home_score.get()] + \
-                ['--away-score'] + [self.away_score.get()] + \
-                ['--overtime'] + [self.overtime.get()] + \
-                ['--league'] + [self.league.get()]
+        args = ['python3', 'elo/match.py',
+                '--home', self.home.get(),
+                '--away', self.away.get(),
+                '--home-score', self.home_score.get(),
+                '--away-score', self.away_score.get(),
+                '--overtime', self.overtime.get(),
+                '--league', self.league.get()]
 
         subprocess.run(args)
 
