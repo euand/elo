@@ -17,6 +17,8 @@ if __name__ == '__main__':
 
     match_info = vars(parser.parse_args())
     match_info['time'] = datetime.now().strftime("%Y-%m-%d %H:%M")
+    match_info['home'] = match_info['home'].lower()
+    match_info['away'] = match_info['away'].lower()
 
     league_path = LEAGUE_PATH.format(match_info['league'])
 
