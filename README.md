@@ -17,6 +17,12 @@ Say that in league `our_league` player `X` beat player `Y` 1-0 and the game did 
 python3 elo/match.py --home X --away Y --home-score 1 --away-score 0 --overtime 0 --league our_league
 ```
 
+Alternatively, to use the (ugly) GUI, run
+
+```bash
+$ make add-matches
+```
+
 ## Print league table
 
 To print the league table for league `our_league` run

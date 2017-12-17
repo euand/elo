@@ -5,3 +5,6 @@ default:
 
 table:
 	python3 elo/table.py --league ${LEAGUE}
+
+add-matches:
+	python3 app/gui.py
