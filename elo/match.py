@@ -22,7 +22,6 @@ if __name__ == '__main__':
 
     league_path = LEAGUE_PATH.format(match_info['league'])
 
-    print(getcwd())
     if not path.exists(league_path):
         mkdir(league_path)
 
@@ -39,3 +38,9 @@ if __name__ == '__main__':
         league.load_json(player_scores_path)
     league.match(match_info)
     league.save(player_scores_path)
+
+    print('Match recorded: \n\t{} vs. {} \n\t{}-{} \n\t{}'.format(match_info['home_player'],
+                                                          match_info['away_player'],
+                                                          match_info['home_score'],
+                                                          match_info['away_score'],
+                                                          match_info['league']))
